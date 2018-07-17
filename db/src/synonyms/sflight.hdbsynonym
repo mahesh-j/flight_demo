@@ -1,0 +1,15 @@
+{
+  "org.mah.flight.db.synonyms::SFLIGHT": {
+    "target": {
+      "object": "SFLIGHT",
+      "schema": "SFLIGHT"
+    }
+  },
+  "org.mah.flight.db.synonyms::SCARR": {
+    "target": {
+      "object": "SCARR",
+      "schema": "SFLIGHT",
+      "database": "HXE"
+    }
+  }
+}

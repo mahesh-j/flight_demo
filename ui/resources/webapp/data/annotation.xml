@@ -1,0 +1,41 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="default">
+			<Annotations Target="default.FlightCarrierType">
+				<Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
+					<Collection>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="ID"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="CONNID"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="FLDATE"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="CURRENCY"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="PLANETYPE"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="URL"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="PLANETYPE"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="default.FlightCarrierType/CONNID">
+			  <Annotation Term="com.sap.vocabularies.Common.v1.Label" String="Connection ID" />
+			  <Annotation Term="com.sap.vocabularies.Common.v1.QuickInfo" String="Connection ID" />
+			</Annotations>
+			<Annotations Target="default.FlightCarrierType/ID">
+			  <Annotation Term="com.sap.vocabularies.Common.v1.Label" String="ID" />
+			  <Annotation Term="com.sap.vocabularies.Common.v1.QuickInfo" String="ID" />
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

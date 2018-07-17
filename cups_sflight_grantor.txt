@@ -1,0 +1,1 @@
+xs cups sflight_grantor -p "{\"host\":\"hxehost\", \"port\":\"39015\", \"user\":\"SYSTEM\", \"password\":\"N@ch1keth\", \"driver\":\"com.sap.db.jdbc.Driver\", \"tags\":[\"hana\"], \"schema\":\"SFLIGHT\"}"

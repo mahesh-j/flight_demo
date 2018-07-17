@@ -1,0 +1,54 @@
+ID: org.mah.flight
+_schema-version: '2.0'
+description: FLIGHT
+version: 0.0.1
+
+modules:
+ - name: db
+   type: hdb
+   path: db
+   requires:
+    - name: hdi_db
+      properties: 
+        TARGET_CONTAINER: ~{hdi-container-name}
+    - name: sflight_grantor
+   provides:
+     - name: tinyjs_api
+       properties:
+         url: ${default-url}
+
+ - name: flightjs
+   type: nodejs
+   path: flightjs
+   requires:
+    - name: db
+    - name: hdi_db
+   provides:
+    - name: flightjs_api
+      properties:
+         url: ${default-url}
+
+
+ - name: ui
+   type: html5
+   path: ui
+   requires:
+     - name: flightjs_api
+       group: destinations
+       properties:
+         name: tinyjs_be
+         url: ~{url}
+
+
+ 
+
+resources:
+ - name: hdi_db
+   parameters:
+      config:
+         schema: flidb
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+ - name: sflight_grantor
+   type: org.cloudfoundry.existing-service

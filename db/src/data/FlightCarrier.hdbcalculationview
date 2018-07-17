@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="org.mah.flight.db.data::FlightCarrier" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="HOURLY" enforceSqlExecution="false">
+<descriptions defaultDescription="FlightCarrier"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="org.mah.flight.db.synonyms::SFLIGHT">
+    <resourceUri>org.mah.flight.db.synonyms::SFLIGHT</resourceUri>
+  </DataSource>
+  <DataSource id="org.mah.flight.db.synonyms::SCARR">
+    <resourceUri>org.mah.flight.db.synonyms::SCARR</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_1" joinType="inner" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="CONNID">
+        <descriptions defaultDescription="CONNID"/>
+      </viewAttribute>
+      <viewAttribute id="FLDATE">
+        <descriptions defaultDescription="FLDATE"/>
+      </viewAttribute>
+      <viewAttribute id="PRICE" aggregationType="sum">
+        <descriptions defaultDescription="PRICE"/>
+      </viewAttribute>
+      <viewAttribute id="CURRENCY">
+        <descriptions defaultDescription="CURRENCY"/>
+      </viewAttribute>
+      <viewAttribute id="PLANETYPE">
+        <descriptions defaultDescription="PLANETYPE"/>
+      </viewAttribute>
+      <viewAttribute id="SEATSMAX" aggregationType="sum">
+        <descriptions defaultDescription="SEATSMAX"/>
+      </viewAttribute>
+      <viewAttribute id="SEATSOCC" aggregationType="sum">
+        <descriptions defaultDescription="SEATSOCC"/>
+      </viewAttribute>
+      <viewAttribute id="PAYMENTSUM" aggregationType="sum">
+        <descriptions defaultDescription="PAYMENTSUM"/>
+      </viewAttribute>
+      <viewAttribute id="SEATSMAX_B" aggregationType="sum">
+        <descriptions defaultDescription="SEATSMAX_B"/>
+      </viewAttribute>
+      <viewAttribute id="SEATSOCC_B" aggregationType="sum">
+        <descriptions defaultDescription="SEATSOCC_B"/>
+      </viewAttribute>
+      <viewAttribute id="SEATSMAX_F" aggregationType="sum">
+        <descriptions defaultDescription="SEATSMAX_F"/>
+      </viewAttribute>
+      <viewAttribute id="SEATSOCC_F" aggregationType="sum">
+        <descriptions defaultDescription="SEATSOCC_F"/>
+      </viewAttribute>
+      <viewAttribute id="CURRCODE">
+        <descriptions defaultDescription="CURRCODE"/>
+      </viewAttribute>
+      <viewAttribute id="URL">
+        <descriptions defaultDescription="URL"/>
+      </viewAttribute>
+      <viewAttribute id="MANDT">
+        <descriptions defaultDescription="MANDT"/>
+      </viewAttribute>
+      <viewAttribute keepFlag="true" id="CARRNAME">
+        <descriptions defaultDescription="CARRNAME"/>
+      </viewAttribute>
+      <viewAttribute id="CARRID">
+        <descriptions defaultDescription="CARRID"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="org.mah.flight.db.synonyms::SFLIGHT">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONNID" source="CONNID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLDATE" source="FLDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRICE" source="PRICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PLANETYPE" source="PLANETYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEATSMAX" source="SEATSMAX"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEATSOCC" source="SEATSOCC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTSUM" source="PAYMENTSUM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEATSMAX_B" source="SEATSMAX_B"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEATSOCC_B" source="SEATSOCC_B"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEATSMAX_F" source="SEATSMAX_F"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEATSOCC_F" source="SEATSOCC_F"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CARRID" source="CARRID"/>
+    </input>
+    <input node="org.mah.flight.db.synonyms::SCARR">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRCODE" source="CURRCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URL" source="URL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CARRNAME" source="CARRNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CARRID" source="CARRID"/>
+    </input>
+    <joinAttribute name="CARRID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="CONNID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CONNID"/>
+      <keyMapping columnObjectName="Join_1" columnName="CONNID"/>
+    </attribute>
+    <attribute id="FLDATE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLDATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="FLDATE"/>
+    </attribute>
+    <attribute id="CURRENCY" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CURRENCY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CURRENCY"/>
+    </attribute>
+    <attribute id="PLANETYPE" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PLANETYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="PLANETYPE"/>
+    </attribute>
+    <attribute id="CURRCODE" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CURRCODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="CURRCODE"/>
+    </attribute>
+    <attribute id="URL" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="URL"/>
+      <keyMapping columnObjectName="Join_1" columnName="URL"/>
+    </attribute>
+    <attribute id="CARRNAME" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CARRNAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="CARRNAME"/>
+    </attribute>
+    <attribute id="CARRID" order="16" descriptionColumnName="CARRNAME" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CARRID"/>
+      <keyMapping columnObjectName="Join_1" columnName="CARRID"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="PRICE" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PRICE"/>
+      <measureMapping columnObjectName="Join_1" columnName="PRICE"/>
+    </measure>
+    <measure id="SEATSMAX" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SEATSMAX"/>
+      <measureMapping columnObjectName="Join_1" columnName="SEATSMAX"/>
+    </measure>
+    <measure id="SEATSOCC" order="7" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SEATSOCC"/>
+      <measureMapping columnObjectName="Join_1" columnName="SEATSOCC"/>
+    </measure>
+    <measure id="PAYMENTSUM" order="8" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PAYMENTSUM"/>
+      <measureMapping columnObjectName="Join_1" columnName="PAYMENTSUM"/>
+    </measure>
+    <measure id="SEATSMAX_B" order="9" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SEATSMAX_B"/>
+      <measureMapping columnObjectName="Join_1" columnName="SEATSMAX_B"/>
+    </measure>
+    <measure id="SEATSOCC_B" order="10" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SEATSOCC_B"/>
+      <measureMapping columnObjectName="Join_1" columnName="SEATSOCC_B"/>
+    </measure>
+    <measure id="SEATSMAX_F" order="11" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SEATSMAX_F"/>
+      <measureMapping columnObjectName="Join_1" columnName="SEATSMAX_F"/>
+    </measure>
+    <measure id="SEATSOCC_F" order="12" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SEATSOCC_F"/>
+      <measureMapping columnObjectName="Join_1" columnName="SEATSOCC_F"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="16" y="-36"/>
+    
+      <rectangleSize width="140"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-40" y="219"/>
+      <rectangleSize height="30" width="262"/>
+    </shape>
+    <shape modelObjectName="org.mah.flight.db.synonyms::SFLIGHT" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="org.mah.flight.db.synonyms::SCARR" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

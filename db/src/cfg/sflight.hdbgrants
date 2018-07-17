@@ -1,0 +1,14 @@
+{
+	"sflight_grantor" : {
+		"object_owner" : {
+			"roles" : [
+				"sflight::external_access_g"
+			]
+		},
+		"application_user" : {
+			"roles" : [
+				"sflight::external_access"
+			]
+		}
+	}
+}

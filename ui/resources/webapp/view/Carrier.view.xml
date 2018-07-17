@@ -1,0 +1,4 @@
+<mvc:View xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:st="sap.ui.comp.smarttable">
+	<st:SmartTable id="anaTab" entitySet="FlightCarrier" useExportToExcel="true" tableType="AnalyticalTable" enableAutoBinding="true"/>
+	
+</mvc:View>

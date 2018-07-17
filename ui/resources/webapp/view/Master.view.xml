@@ -1,0 +1,33 @@
+<mvc:View controllerName="ui.ui.controller.Master" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table items="{flight>/FlightCarrier}" growing="true">
+						<columns>
+							<Column><Text text="Carrier id"/> </Column>
+							<Column><Text text="Carrier Name"/> </Column>
+							<Column><Text text="Price"/> </Column>
+							<Column><Text text="Currency Code"/> </Column>
+							<Column><Text text="Connection id"/> </Column>
+							<Column><Text text="Flight date"/> </Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{flight>CARRID}"/>
+									<Text text="{flight>CARRNAME}"/>
+									<Text text="{flight>PRICE}"/>
+									<Text text="{flight>CURRCODE}"/>
+									<Text text="{flight>CONNID}"/>
+									<Text text="{flight>FLDATE}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
