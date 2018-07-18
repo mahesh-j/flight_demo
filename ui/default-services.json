@@ -1,0 +1,26 @@
+{
+    "VCAP_APPLICATION": {
+        "start": "2018-07-18 08:04:56 +0000",
+        "application_id": "b0c3d9b2-861e-4b78-b8a3-f20cf04cc119",
+        "instance_id": "b0c3d9b2-861e-4b78-b8a3-f20cf04cc119",
+        "space_id": "4dea8ac7-6245-4721-9221-9e23d1597ec7",
+        "application_name": "VRqYOcyEfRKCQnXIorg-mah-flight-ui",
+        "organization_name": "HANAExpress",
+        "space_name": "DEV",
+        "started_at_timestamp": "1531901096370",
+        "started_at": "2018-07-18 08:04:56 +0000",
+        "state_timestamp": "1531901048876",
+        "full_application_uris": [
+            "https://hxehost:51051"
+        ],
+        "application_uris": [
+            "hxehost:51051"
+        ],
+        "uris": [
+            "hxehost:51051"
+        ],
+        "version": "a4447464-cd3b-4065-a827-712819d14b30",
+        "application_version": "a4447464-cd3b-4065-a827-712819d14b30"
+    },
+    "VCAP_SERVICES": {}
+}
