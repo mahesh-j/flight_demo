@@ -1,4 +1,12 @@
-<mvc:View xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:st="sap.ui.comp.smarttable">
-	<st:SmartTable id="anaTab" entitySet="FlightCarrier" useExportToExcel="true" tableType="AnalyticalTable" enableAutoBinding="true"/>
-	
+<mvc:View xmlns:m="sap.m" xmlns:t="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:st="sap.ui.comp.smarttable">
+	<st:SmartTable id="anaTab" entitySet="FlightCarrier" useExportToExcel="true" tableType="AnalyticalTable" enableAutoBinding="true">
+		<!--t:AnalyticalTable id="dashboardTable" mode="MultiSelect" showNoData="false" fixedLayout="false">
+			<t:AnalyticalColumn id="date" hAlign="Left" index="1">
+				<t:customData>
+					<core:CustomData key="p13nData" value='\{"columnKey" : "CONNID", "sortProperty" : "CONNID", "filterProperty" : "CONNID" }'></core:CustomData>
+				</t:customData>
+				<m:Label text="Connection Id" />
+			</t:AnalyticalColumn>
+		</t:AnalyticalTable-->
+	</st:SmartTable>
 </mvc:View>
