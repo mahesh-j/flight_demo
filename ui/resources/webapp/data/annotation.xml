@@ -4,9 +4,12 @@
 			<Annotations Target="default.FlightCarrierType">
 				<Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
 					<Collection>
-						<Record Type="com.sap.vocabularies.UI.v1.DataField">
-							<PropertyValue Property="Value" Path="ID"/>
+						<!--<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="CARRID"/>
 						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="CARRNAME"/>
+						</Record>-->							
 						<Record Type="com.sap.vocabularies.UI.v1.DataField">
 							<PropertyValue Property="Value" Path="CONNID"/>
 						</Record>
@@ -19,12 +22,15 @@
 						<Record Type="com.sap.vocabularies.UI.v1.DataField">
 							<PropertyValue Property="Value" Path="PLANETYPE"/>
 						</Record>
-						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+						<Record Type="com.sap.vocabularies.UI.v1.DataFieldWithUrl">
+							<PropertyValue Property="Url" Path="URL"/>
 							<PropertyValue Property="Value" Path="URL"/>
 						</Record>
-						<Record Type="com.sap.vocabularies.UI.v1.DataField">
-							<PropertyValue Property="Value" Path="PLANETYPE"/>
-						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.UI.v1.SelectionFields">
+					<Collection>
+						<PropertyPath>CARRID</PropertyPath>
 					</Collection>
 				</Annotation>
 			</Annotations>

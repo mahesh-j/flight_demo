@@ -1,5 +1,8 @@
 service {
-	"org.mah.flight.db.data::FlightCarrier" as "FlightCarrier" keys generate local "ID";
+	"org.mah.flight.db.data::FlightCarrier" as "FlightCarrier" 
+	keys generate local "ID"
+	aggregates always;
+	
 }
 annotations {
   enable OData4SAP;
