@@ -1,0 +1,9 @@
+{ 
+    "hana": {
+        "host"      : "hxehost",
+        "port"      : "39015",
+        "user"      : "FLIDB_1_CTJPO4AIGWEAQBAHIFZ14S2CN_RT",
+        "password"  : "If5-vFwO0YjiPX2EMUUYrBGr-DYqs3aJnV9KADgI.bfU8XAEGJamrTRIXacXzMGgNNRDuv9200aZsgiPjPFb1OOawo8zMozWTJa16vHSIXPVThBX7joX8bskga7VzfE_",
+        "schema"    : "FLIDB_1"
+    }
+}

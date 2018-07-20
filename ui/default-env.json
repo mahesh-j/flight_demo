@@ -1,0 +1,10 @@
+{
+    "PORT": 3003,
+    "destinations": [
+      {
+        "name":"tinyjs_be",
+        "url":"http://localhost:3000",
+        "forwardAuthToken": true
+      }
+    ]
+  }

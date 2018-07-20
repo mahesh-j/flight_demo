@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <mvc:View controllerName="ui.ui.controller.Carrier"
 	      xmlns:m="sap.m" 
 		  xmlns:t="sap.ui.table" 
