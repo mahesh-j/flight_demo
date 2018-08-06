@@ -3,7 +3,10 @@ service {
 	keys generate local "ID"
 	aggregates always;
 	
+	"org.mah.flight.db.data::Scarr" as "Scarr" 
+	keys generate local "ID";
 }
+
 annotations {
   enable OData4SAP;
 }

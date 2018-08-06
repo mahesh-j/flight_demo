@@ -22,10 +22,10 @@
 				}
 			},
 			"localAnnotation" : {
-				"uri" : "data/annotation.xml",
+				"uri" : "annotation/annotation.xml",
 				"type" : "ODataAnnotation",
 				"settings" : {
-					"localUri" : "data/annotation.xml"
+					"localUri" : "annotation/annotation.xml"
 				}
 			}
 		}
