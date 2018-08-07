@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="org.mah.flight.db.data::Scarr" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="HOURLY" enforceSqlExecution="false">
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="org.mah.flight.db.data::Scarr" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="HOURLY" enforceSqlExecution="false">
 <descriptions defaultDescription="Scarr"/>
 <localVariables/>
 <variableMappings/>
@@ -9,7 +9,7 @@
   </DataSource>
 </dataSources>
 <calculationViews/>
-<logicalModel id="org.mah.flight.db.synonyms::SCARR">
+<logicalModel id="org.mah.flight.db.synonyms::SCARR" filterExpressionLanguage="SQL">
   <attributes>
     <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MANDT"/>
@@ -36,6 +36,8 @@
   <baseMeasures/>
   <calculatedMeasures/>
   <restrictedMeasures/>
+
+  <filter>&quot;MANDT&quot; = '300'</filter>
 </logicalModel>
 <layout>
   <shapes>

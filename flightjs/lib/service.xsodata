@@ -6,7 +6,3 @@ service {
 	"org.mah.flight.db.data::Scarr" as "Scarr" 
 	keys generate local "ID";
 }
-
-annotations {
-  enable OData4SAP;
-}
