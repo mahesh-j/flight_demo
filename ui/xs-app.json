@@ -1,7 +1,8 @@
 {
 	"welcomeFile": "webapp/index.html",
 	"authenticationMethod": "route",
-	"routes": [{
+	"routes": [
+		{
 		"source": "^/service.xsodata/\\$metadata(\\?.*)?$",
 		"target": "/annotatedMetadata",
 		"destination" : "flightjs_be",

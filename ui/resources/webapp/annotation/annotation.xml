@@ -32,6 +32,15 @@
 						</Record>
 					</Collection>
 				</Annotation>
+				<Annotation Term="com.sap.vocabularies.UI.v1.PresentationVariant">
+					<Record Type="com.sap.vocabularies.UI.v1.PresentationVariantType">
+						<PropertyValue Property="GroupBy">
+							<Collection>
+								<PropertyPath>CARRID</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
 				<Annotation Term="com.sap.vocabularies.UI.v1.SelectionFields">
 					<Collection>
 						<PropertyPath>CARRID</PropertyPath>

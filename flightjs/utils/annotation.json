@@ -1,0 +1,93 @@
+{
+	"entityType" : {
+		"FlightCarrierType" : {
+			"semantics" : "aggregate",
+			"Property" : {
+				"CONNID": { 
+					"aggregation-role" : "dimension",
+					"label" :"Connection Id" 
+				},
+				"FLDATE": { 
+					"aggregation-role" : "dimension",
+					"label" : "Flight Date" 
+				},
+				"CURRENCY": { 
+					"aggregation-role" : "dimension",
+					"label" : "Currency" 
+				},
+				"PLANETYPE": { 
+					"aggregation-role" : "dimension",
+					"label" : "Plane Type" 
+				},
+				"CURRCODE": { 
+					"aggregation-role" : "dimension",
+					"label" : "Currency Code" 
+				},
+				"URL": { 
+					"aggregation-role" : "dimension",
+					"label" : "URL" 
+				},
+				"CARRNAME": { 
+					"aggregation-role" : "dimension",
+					"label" : "Carrier Name" 
+				},
+				"CARRID" : { 
+					"aggregation-role" : "dimension",
+					"label" : "Carrier Id" 
+				},
+				"PRICE" : {
+					"aggregation-role" : "measure",
+					"label" : "Price"
+				},
+				"SEATSMAX" : {
+					"aggregation-role" : "measure",
+					"label" : "Maximum Seats"
+				},
+				"SEATSOCC" : { 
+					"aggregation-role" : "measure",
+					"label" : "SEATSOCC" 
+				},
+				"PAYMENTSUM" : { 
+					"aggregation-role" : "measure",
+					"label" : "PAYMENTSUM" 
+				},
+				"SEATSMAX_B" : { 
+					"aggregation-role" : "measure",
+					"label" : "SEATSMAX_B" 
+				},
+				"SEATSOCC_B" : { 
+					"aggregation-role" : "measure",
+					"label" : "SEATSOCC_B" 
+				},
+				"SEATSMAX_F" : { 
+					"aggregation-role" : "measure",
+					"label" : "SEATSMAX_F" 
+				},
+				"SEATSOCC_F" : { 
+					"aggregation-role" : "measure",
+					"label" : "SEATSOCC_F" 
+				}
+			}
+		},
+		"ScarrType" : {
+			"Property" : {
+				"CARRID" : {
+					"value-list" : "fixed-values",
+					"text" : "CARRNAME",
+					"filter-restriction" : "single-value"
+				}
+			}
+		}
+	},
+	"entitySet" : {
+		"FlightCarrier" : {
+			"addressable" : false,
+			"creatable" : false,
+			"updatable" : false,
+			"deletable" : false
+		},
+		"Scarr" : {
+			"semantics" : "fixed-values"
+		}
+	}
+}
