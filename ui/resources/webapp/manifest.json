@@ -54,7 +54,7 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "ui.ui.view.Carrier",
+			"viewName": "ui.ui.view.App",
 			"type": "XML"
 		},
 		"dependencies": {
