@@ -1,8 +1,19 @@
 {
 	"welcomeFile": "webapp/index.html",
-	"authenticationMethod": "none",
-	"routes": [{
-		"source" : "^/service.xsodata/.*$",
-		"destination" : "tinyjs_be"
-	}]
+	"authenticationMethod": "route",
+	"routes": [
+		{
+		"source": "^/service.xsodata/\\$metadata(\\?.*)?$",
+		"target": "/annotatedMetadata",
+		"destination" : "flightjs_be",
+		"csrfProtection": true,
+		"authenticationType": "xsuaa"
+	},
+	{
+		"source": "^/service.xsodata/.*$",
+		"destination" : "flightjs_be",
+		"csrfProtection": true,
+		"authenticationType": "xsuaa"
+	}
+	]
 }

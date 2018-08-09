@@ -1,4 +1,4 @@
-<mvc:View controllerName="ui.ui.controller.Carrier"
+<mvc:View controllerName="com.cnp.test.controller.Carrier"
 	      xmlns:m="sap.m" 
 		  xmlns:t="sap.ui.table" 
 		  xmlns:mvc="sap.ui.core.mvc" 
@@ -6,56 +6,12 @@
 		  xmlns:html="http://www.w3.org/1999/xhtml" 
 		  xmlns:st="sap.ui.comp.smarttable"
 		  xmlns:sf="sap.ui.comp.smartfilterbar"
-		  xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+		  xmlns:sl="sap.ui.comp.navpopover">
 	<sf:SmartFilterBar id="sFb" entityType="FlightCarrierType" visible="true">
 	</sf:SmartFilterBar>
-	<st:SmartTable id="anaTab" smartFilterId="sFb" entitySet="FlightCarrier" useExportToExcel="true" tableType="AnalyticalTable" 
-					enableAutoBinding="true"
-					app:p13nDialogSettings="{
-												columns : { 
-													visible : true,
-													payload : { 
-														visibleItemsThreshold : 3,
-														items : [ {
-															columnKey : 'CARRID',
-															visible : false
-														} ]
-													}
-												}
-											}">
-		<!--<st:customData>
-			<core:CustomData
-				key="p13nDialogSettings"
-				value='\{ "group" : 
-							\{ 
-								"visible" : false
-							} 
-						}'>
-			</core:CustomData>
-		</st:customData>-->
-		<t:AnalyticalTable id="dashboardTable">
-			<t:columns>
-				<t:AnalyticalColumn id="carrid" managed="true" leadingProperty="CARRID" filterProperty="CARRID" sortProperty="CARRID" inResult="true"  width="150px" grouped="true">
-					<m:Label text="Carrier Id" />
-					<t:customData>
-						<core:CustomData key="p13nData" value='\{ "columnKey" : "CARRID", "visible" : "false" \}'></core:CustomData>
-					</t:customData>
-				</t:AnalyticalColumn>
-				<t:AnalyticalColumn id="flDate"  inResult="true" width="150px" leadingProperty="CARRNAME">
-					<m:Label text="Carrier Name" />
-					<t:customData>
-						<core:CustomData key="p13nData" value='\{ 
-																	"columnKey" : "CARRNAME" , 
-																	"columnIndex" : "2", 
-																	"sortProperty" : "CARRNAME"
-																\}'>
-						</core:CustomData>
-					</t:customData>
-					<t:template>
-                         <m:Text text="{ path : 'CARRNAME' }" />
-                	</t:template>
-				</t:AnalyticalColumn>
-			</t:columns>
-		</t:AnalyticalTable>
+	<st:SmartTable id="anaTab" smartFilterId="sFb" entitySet="FlightCarrier" useExportToExcel="true" tableType="AnalyticalTable" enableAutoBinding="true" >
+	<!--	<st:semanticObjectController>
+			<sl:SemanticObjectController navigate="onNavigate" navigationTargetsObtained="onNavigationTargetsObtained"/>
+		</st:semanticObjectController>-->
 	</st:SmartTable>
 </mvc:View>
