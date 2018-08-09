@@ -1,4 +1,4 @@
-<mvc:View controllerName="ui.ui.controller.Carrier"
+<mvc:View controllerName="com.cnp.test.controller.Carrier"
 	      xmlns:m="sap.m" 
 		  xmlns:t="sap.ui.table" 
 		  xmlns:mvc="sap.ui.core.mvc" 
@@ -6,10 +6,12 @@
 		  xmlns:html="http://www.w3.org/1999/xhtml" 
 		  xmlns:st="sap.ui.comp.smarttable"
 		  xmlns:sf="sap.ui.comp.smartfilterbar"
-		  xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+		  xmlns:sl="sap.ui.comp.navpopover">
 	<sf:SmartFilterBar id="sFb" entityType="FlightCarrierType" visible="true">
 	</sf:SmartFilterBar>
-	<st:SmartTable id="anaTab" smartFilterId="sFb" entitySet="FlightCarrier" useExportToExcel="true" tableType="AnalyticalTable" 
-					enableAutoBinding="true" >
+	<st:SmartTable id="anaTab" smartFilterId="sFb" entitySet="FlightCarrier" useExportToExcel="true" tableType="AnalyticalTable" enableAutoBinding="true" >
+	<!--	<st:semanticObjectController>
+			<sl:SemanticObjectController navigate="onNavigate" navigationTargetsObtained="onNavigationTargetsObtained"/>
+		</st:semanticObjectController>-->
 	</st:SmartTable>
 </mvc:View>

@@ -49,6 +49,9 @@
 					</Collection>
 				</Annotation>
 			</Annotations>
+			<Annotations Target="default.FlightCarrierType/CONNID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject" String="CONNID" />
+			</Annotations>
 			<Annotations Target="default.FlightCarrierType/ID">
 				<Annotation Term="com.sap.vocabularies.Common.v1.FieldControl" EnumMember="com.sap.vocabularies.Common.v1.FieldControlType/Hidden"/>
 			</Annotations>
